@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  </head>
+
+    <body class="">
+      <header>
+        <nav class="main-header">
+          <div class="menu">
+            <h1>Planificador de ruta</h1>
+          </div>
+        </nav>
+      </header>
+
+
+<!-- __TESTING -->
+      <div class="card">
+        <div class="card request" id="request">
+          <h2>Especifica tu ruta</h2>
+          <div class="choose-bus">
+            <select id="json-choose-bus" name="">
+              <option selected value="base"> Escoge el autobus</option>
+              <option value="D20">D20 Pg. Marítim / Ernest Lluch</option>
+              <option value="D40">D40 Pl. Espanya / Via Favència</option>
+              <option value="D50">D50 Paral·lel / Ciutat Meridiana</option>
+              <option value="H2">H2 Av. Esplugues / Trinitat Nova</option>
+              <option value="H4">H4 Zona Universitària / Bon Pastor</option>
+              <option value="H6">H6 Zona Universitària / Onze de Setembre</option>
+              <option value="H8">H8 Camp Nou / Bon Pastor</option>
+              <option value="H10">H10 Pl. Sants / Olímpic de Badalona</option>
+              <option value="H12">H12 Gornal / Besòs Verneda</option>
+              <option value="H14">H14 Paral·lel / Sant Adrià</option>
+              <option value="H16">H16 Pg. Zona Franca / Fòrum Campus Besòs</option>
+              <option value="V1">V1 Districte Gran Via l'Hospitalet / Av. Esplugues</option>
+              <option value="V3">V3 Zona Franca / Can Caralleu</option>
+              <option value="V5">V5 Mare de Déu de Port / Pedralbes</option>
+              <option value="V7">V7 Pl. Espanya / Sarrià</option>
+              <option value="V9">V9 Poble-sec / Sarrià</option>
+              <option value="V11">V11 Estació Marítima (WTC) / Bonanova</option>
+              <option value="V13">V13 Pla de Palau / Av. Tibidabo</option>
+              <option value="V15">V15 Barceloneta / Av. Tibidabo</option>
+              <option value="V17">V17 Port Vell / Vall d'Hebron</option>
+              <option value="V19">V19 Barceloneta / Pl. Alfonso Comín</option>
+              <option value="V21">V21 Pg. Marítim / Montbau</option>
+              <option value="V23">V23 Nova Icària / Can Marcet</option>
+              <option value="V25">V25 Nova Icària / Horta</option>
+              <option value="V27">V27 Pg. Marítim / Canyelles</option>
+              <option value="V29">V29 Diagonal Mar / Roquetes</option>
+              <option value="V31">V31 Mar Bella / Trinitat Vella</option>
+              <option value="V33">V33 Fòrum Campus Besòs / Santa Coloma</option>
+              <option value="6">6 Pg. Manuel Girona / Poblenou</option>
+              <option value="7">7 Fòrum / Zona Universitària</option>
+              <option value="11">11 Trinitat Vella / Roquetes</option>
+              <option value="13">13 Mercat Sant Antoni / Parc de Montjuïc</option>
+              <option value="19">19 Pl. Catalunya / Sant Genís</option>
+              <option value="21">21 Paral·lel / El Prat</option>
+              <option value="22">22 Pl. Catalunya / El Carmel</option>
+              <option value="23">23 Pl. Espanya / Parc Logístic</option>
+              <option value="24">24 Pl. Catalunya / El Carmel</option>
+              <option value="27">27 Estació de Sants / Roquetes</option>
+              <option value="33">33 Zona Universitària / Verneda</option>
+              <option value="34">34 Pg. Manuel Girona / Pl. Virrei Amat</option>
+              <option value="39">39 Pl. Urquinaona / Pl. Catalana</option>
+              <option value="46">46 Pl. Espanya / Aeroport BCN</option>
+              <option value="47">47 Pg. Marítim / Canyelles</option>
+              <option value="52">52 Pl. Catalunya / Collblanc</option>
+              <option value="54">54 Estació del Nord / Cardenal Reig</option>
+              <option value="55">55 Pl. Urquinaona / Parc de Montjuïc</option>
+              <option value="59">59 Poblenou / Pl. Reina Maria Cristina</option>
+              <option value="60">60 Besòs Verneda / Vall d'Hebron</option>
+              <option value="62">62 Pl. Catalunya / Ciutat Meridiana</option>
+              <option value="63">63 Pl. Universitat / Sant Joan Despí</option>
+              <option value="65">65 Pl. Espanya / El Prat</option>
+              <option value="67">67 Pl. Catalunya / Cornellà</option>
+              <option value="68">68 Hospital Clínic / Cornellà</option>
+              <option value="70">70 Rambla de Badal / Bonanova</option>
+              <option value="75">75 Les Corts / Av. Tibidabo</option>
+              <option value="76">76 Sant Genís / Ciutat Meridiana</option>
+              <option value="78">78 Estació de Sants / Sant Joan Despí</option>
+              <option value="79">79 Pl. Espanya /  Av. Carrilet</option>
+              <option value="91">91 Manso / La Bordeta</option>
+              <option value="94">94 Circular Cornellà 2</option>
+              <option value="95">95 Circular Cornellà 1</option>
+              <option value="96">96  La Sagrera / Montcada i Reixac</option>
+              <option value="97">97 Pg. Fabra i Puig / Vallbona</option>
+              <option value="102">102 Pl. Eivissa / Cementiri de Collserola</option>
+              <option value="103">103 Montcada i Reixac / Cementiri de Collserola</option>
+              <option value="104">104 Fabra i Puig / Cementiri de Collserola</option>
+              <option value="107">107 Cementiri Montjuïc</option>
+              <option value="109">109 Hospital Clínic / Polígon Zona Franca</option>
+              <option value="110">110  Av. Carrilet / Polígon Zona Franca</option>
+              <option value="111">111 Tibidabo</option>
+              <option value="112">112 Sant Genís</option>
+              <option value="113">113 La Mercè</option>
+              <option value="114">114 Gràcia / Can Baró</option>
+              <option value="115">115 La Bordeta</option>
+              <option value="116">116 La Salut</option>
+              <option value="117">117 Guinardó</option>
+              <option value="118">118 Mas Guimbau</option>
+              <option value="119">119 La Teixonera</option>
+              <option value="120">120 Ciutat Vella</option>
+              <option value="121">121 Poble Sec</option>
+              <option value="122">122 Turó de la Peira</option>
+              <option value="123">123 Bonanova Alta</option>
+              <option value="124">124 Penitents</option>
+              <option value="125">125 La Marina</option>
+              <option value="126">126 Sant Andreu</option>
+              <option value="127">127 Roquetes</option>
+              <option value="128">128 El Rectoret</option>
+              <option value="129">129 El Coll</option>
+              <option value="130">130 Can Caralleu</option>
+              <option value="131">131 El Putxet</option>
+              <option value="132">132 Torre Llobeta / Prosperitat</option>
+              <option value="133">133 Baró de Viver / Sant Andreu Arenal</option>
+              <option value="135">135 Vall d'Hebron / Montbau</option>
+              <option value="136">136 Pg. Marítim / Verneda</option>
+              <option value="150">150 Pl. Espanya / Castell de Montjuïc</option>
+              <option value="155">155 Can Cuiàs / Santa Maria de Montcada</option>
+              <option value="157">157 Collblanc / Sant Joan Despí</option>
+              <option value="165" onchange="window.alert(this.value);">165 Prat Exprés</option>
+              <option value="185">185  Canyelles / Vall d'Hebron</option>
+              <option value="191">191 Pl. Congrés / Can Baró</option>
+              <option value="192">192 Poblenou / Hospital de Sant Pau</option>
+              <option value="196">196 Pl. Kennedy / Bellesguard</option>
+            </select>
+          </div>
+
+          <div class="choose-busstop">
+            <select id="json-choose-busstop">
+              <option>Escoge la parada</option>
+            </select>
+          </div>
+          <input type="button" class="btn-search" value="Consultar info" onclick="search()">
+        </div>
+        <div class="card response" id="response">
+          <h2>Resultado</h2>
+          <p>
+            <strong>Número del bus: </strong><span id="numero"></span><br>
+            <strong>Minutos que quedan : </strong><span id="min"></span>m : <span id="sec"></span>s <br>
+            <!-- <strong>Parada final: </strong><span id="paradafin"></span><br> -->
+            <!-- <strong>Estado de línea: </strong><span id="status"></span><br> -->
+          </p>
+        </div>
+      </div>
+    </body>
+<!-- _____Selecting bus stops of selected bus_ -->
+    <script>
+    		$(function() {
+
+    			$("#json-choose-bus").change(function() {
+    				var $dropdown = $(this);
+    				$.getJSON("jsondata/data.json", function(data) {
+    					var key = $dropdown.val();
+    					var vals = [];
+
+    					switch(key) {
+    						case '165':
+    							vals = data.buses.split(",");
+    							break;
+    						case 'busStops':
+    							vals = data.busStops.split(",");
+    							break;
+    						case 'base':
+    							vals = ['Escoge el autobus'];
+    					}
+
+    					var $chooseStop = $("#json-choose-busstop");
+    					$chooseStop.empty();
+    					$.each(vals, function(index, value) {
+                console.log(index);
+                // console.log("<option " + "id = stopId" + index + ">" + value + "</option>");
+                $chooseStop.append("<option " + "id = stopId" + index + ">" + value + "</option>");
+    					});
+
+    				});
+    			});
+
+    		});
+    	</script>
+</html>

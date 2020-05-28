@@ -1,0 +1,135 @@
+/*______________________________________MAIN__________________________________*/
+* {
+  box-sizing: border-box
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Dosis', sans-serif;
+  line-height: 1.6;
+  color: #666;
+  background: #F6F6F6;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+/*______________________________________HEADER__________________________________*/
+
+header{
+  position: relative;
+}
+/*h1 */
+header h1{
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem 2.5rem;
+  margin: 0 0 2rem 0;
+  font-size: 2.5rem;
+  color: white;
+  background-image: linear-gradient(90deg, rgba(245,168,44,0.7931547619047619) 1%,
+                                    rgba(189,196,16,0.938813025210084) 24%,
+                                    rgba(0,212,255,1) 100%);
+}
+
+
+img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+}
+/*//change it and add class to p*/
+p {
+  padding: 0 2.5rem 2.5rem;
+  margin: 0;
+}
+
+
+
+/*_________________________CARD STYLES________________________________________*/
+.card {
+  margin: 1rem;
+  background: white;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all .2s linear;
+}
+
+.card:hover {
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+  transform: translate3D(0, -2px, 0);
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .card {
+    flex: 1 1 calc(33% - 2rem);
+  }
+}
+
+.request h2, .response h2{
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  text-align: center;
+  padding: 1rem 2.5rem;
+  margin: 0 0 2rem 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.response h2{
+  background-image: linear-gradient(120deg, #ff9a9e 0%, #fecfef 100%);
+}
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/*_____________________________REQUEST CARDS________________________________________*/
+.request{
+  position: relative;
+  float: none;
+  /*width: 50%;*/
+  width: auto;
+}
+
+.choose-bus{
+  position: relative;
+  margin: 2rem 0 0 2rem;
+
+}
+
+.choose-busstop{
+  position: relative;
+  margin: 2rem 0 0 2rem;
+}
+
+
+/*_____________________________RESPONSE CARDS________________________________________*/
+.response{
+  position: relative;
+  overflow: hidden;
+  display: none;
+  /*visibility: hidden;*/
+}
+
+
+
+
+/*_____________________________BUTTONS________________________________________*/
+.btn-search{
+  position: relative;
+  margin: 2rem 0 2rem 2rem;
+}
+
+/*_____________________________FOOTER________________________________________*/
+/*_____________________________FOOTER________________________________________*/
